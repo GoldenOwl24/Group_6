@@ -1,5 +1,5 @@
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 // this class dislapys text with info on how to play the game
 public class HowTo {
@@ -15,14 +15,11 @@ public class HowTo {
         frame.setLocationRelativeTo(null); 
 
         
-        label = new JLabel("<html>"
-        +"<h2>How to Play:</h2>"
-        +"<p>⬆: Press the Up arrow to the start the game</p>"
-        +"<p> ⬅️ ➡️: Use the Left and Right arrows to move the paddle</p"
-        +"<p>P: Press 'P' to pause the game</p>"
-        +"</html>");
+        
+        label = new JLabel();
+        label.setText("^: arrow to start    <>: arrows to move the paddle   P: pause");
         label.setHorizontalAlignment(JLabel.CENTER);
-        label.setFont(new Font("Arial", Font.PLAIN,16);
+        // label.setFont(new Font("Arial", Font.PLAIN,16);
 
    
         frame.getContentPane().setLayout(new BorderLayout());

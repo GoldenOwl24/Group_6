@@ -4,7 +4,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-public class GameBackground extends JPanel {
+public class GameBackground extends JPanel  {
     private Image backgroundImage;
 
     public GameBackground() {
@@ -16,15 +16,15 @@ public class GameBackground extends JPanel {
         }
 
 
-        iButton = new JButton("i");
-        iButton.setFont(new Font("Serif", Font.BOLD, 13));
-        iButton.setBounds(0, 0, 40, 40); // Position the button
-        iButton.setFocusable(false);
-        iButton.addActionListener(this);
+        // JButton iButton = new JButton("i");
+        // iButton.setFont(new Font("Serif", Font.BOLD, 13));
+        // iButton.setBounds(0, 0, 40, 40); // Position the button
+        // iButton.setFocusable(false);
+        // iButton.addActionListener(this);
 
-        // Setup the panel
-        this.setLayout(null); // Use null layout for absolute positioning
-        this.add(iButton); // Add the button to the panel
+        // // Setup the panel
+        // this.setLayout(null); // Use null layout for absolute positioning
+        // this.add(iButton); // Add the button to the panel
         
     }
 
@@ -37,11 +37,17 @@ public class GameBackground extends JPanel {
         }
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e){
-        if(e.getSource() = Button){
-            //Create and show HowTo dialog or frame
-            HowTo ht = new HowTo();
-        }
-    }
+    // @Override
+    // public void actionPerformed(ActionEvent e){
+    //     if(e.getSource() = Button){
+    //         //Create and show HowTo dialog or frame
+    //         HowTo ht = new HowTo();
+    //     }
+    // }
+
+    // @Override
+    // public void actionPerformed(ActionEvent e) {
+    //     // TODO Auto-generated method stub
+    //     throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+    // }
 }
