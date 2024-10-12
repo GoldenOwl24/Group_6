@@ -8,13 +8,14 @@ import javax.swing.*;
 
 
 //This class creates the initial game "Play" option and image
-public class Launch implements ActionListener {
+public class Launch extends JPanel implements ActionListener {
     private JFrame frame;
     private JButton playButton;
     private Image backgroundImage;
     private static final int WINDOW_WIDTH = 800; // Set the width of the window
     private static final int WINDOW_HEIGHT = 600; // Set the height of the window
     Font MatrixFont;
+    private JButton infoButton;
 
     public Launch() {
         // Load the background image
@@ -37,6 +38,17 @@ public class Launch implements ActionListener {
         // Create the frame and button
         frame = new JFrame();
         playButton = new JButton("PLAY");
+
+        //Create information button
+        infoButton = new JButton("i");
+        infoButton.setFont(MatrixFont);
+        infoButton.setPreferredSize(new Dimension(20,20));
+        infoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e){
+                new HowTo();
+            }
+        });
 
         // Create a JPanel for the background
         JPanel panel = new JPanel() {
@@ -72,6 +84,13 @@ public class Launch implements ActionListener {
         label.setVerticalAlignment(SwingConstants.CENTER); // Centre the text 
 		panel.add(label);
         label.setVisible(true);
+        
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.add(infoButton);
+        panel.add(buttonPanel);
+        buttonPanel.setBounds(10,WINDOW_HEIGHT-40,20,20);
+        
 
         frame.setContentPane(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -92,6 +111,9 @@ public class Launch implements ActionListener {
 
     public static void main(String[] args) {
         new Launch(); // Start the launch screen
+        //new HowTo();
+        
+
     }
     
 }

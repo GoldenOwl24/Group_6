@@ -19,7 +19,7 @@ public class HowTo {
         label = new JLabel();
         label.setText("^: arrow to start    <>: arrows to move the paddle   P: pause");
         label.setHorizontalAlignment(JLabel.CENTER);
-        // label.setFont(new Font("Arial", Font.PLAIN,16);
+        //label.setFont(new Font("Arial", Font.PLAIN,16);
 
    
         frame.getContentPane().setLayout(new BorderLayout());
